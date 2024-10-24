@@ -8,21 +8,19 @@ apt update -y
 ufw disable
 
 
-
 #NTP Section
 
 # Install NTP without prompts
 apt install ntp -y
 
-# Set the system timezone to UTC manually
-ln -sf /usr/share/zoneinfo/UTC /etc/localtime
+# Set the system timezone to Asia/Jakarta manually
+ln -sf /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
 
 # Restart NTP to apply changes
 service ntp restart
 
 # Verify the timezone setting
 date
-
 
 #Add Open Files Limit
 bash -c "echo '

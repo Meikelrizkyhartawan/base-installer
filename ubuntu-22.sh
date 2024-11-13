@@ -36,6 +36,6 @@ echo "Add ulimit complete"
 
 # Update Inotify Watchers
 echo fs.inotify.max_user_watches=5242880 | tee -a /etc/sysctl.conf
-echo fs.inotify.max_user_instances=256 | tee -a /etc/sysctl.conf
+echo fs.inotify.max_user_instances=512 | tee -a /etc/sysctl.conf
 
 sysctl -p
